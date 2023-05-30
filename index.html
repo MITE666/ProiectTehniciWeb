@@ -4,38 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hollow Knight Silksong</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-    <header class="header">
 
-        <ul class="navbar" id="navbar">
-            <li><a href="#footer">Home</a></li>
-            <li><a href="#portfolio">About Team Cherry</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#footer">Contacts</a></li>
-            <li>
-                <a class="close" href="#">
-                    <img src="https://ljc-dev.github.io/testing0/ham-close.svg" alt="close">
-                </a>
-            </li>
-        </ul>
-        <a class="hamburger" href="#navbar">
-            <img src="img/menu.png" alt="menu" style="width: 18px; height: 18px;">
-        </a>
+    <header class="header">
+        <div class="container header-container">
+
+            <div class="burger">
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item">
+                        <a data-goto=".hero" href="" class="header-link active">Home</a>
+                    </li>
+                    <li class="header-item">
+                        <a data-goto=".portfolio" href="" class="header-link">About Team Cherry</a>
+                    </li>
+                    <li class="header-item">
+                        <a data-goto=".about" href="" class="header-link">About</a>
+                    </li>
+                    <li class="header-item">
+                        <a data-goto=".footer" href="" class="header-link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
     <main>
         <section class="hero" id="hero">
             <div class="container">
                 <h1 class="hero__title">Hollow Knight&nbsp;Silksong</h1>
                 <p class="hero__descr">The most anticipated sequel of this summer!</p>
+                <img class="mouse" src="/img/mouse.svg" alt="">
             </div>
         </section>
-        <section class="about" id="about">
+        <section class="about" id="about" data-aos="zoom-in">
             <div class="container">
                 <div class="about__top grid">
                     <div class="about__col">
@@ -63,13 +77,14 @@
                     <div class="about__col">
                         <h2 class="about__title">Hollow Knight Silksong: The Sequel of a Brilliant Game</h2>
                         <div class="about__text">
-                            <p class="about__desc">Hollow Knight: Silksong is an upcoming Metroidvania video game developed and published by Team Cherry for Windows, macOS, Linux, PlayStation 4, PlayStation 5, Nintendo Switch, Xbox One, and Xbox Series X/S. It was originally announced on 14 February 2019, as a sequel to the 2017 game Hollow Knight and is aimed to be released before 12 June 2023.</p>
+                            <p class="about__desc">Hollow Knight: Silksong is an upcoming Metroidvania video game developed and published by Team Cherry for Windows, macOS, Linux, PlayStation 4, PlayStation 5, Nintendo Switch, Xbox One, and Xbox Series X/S. It was originally
+                                announced on 14 February 2019, as a sequel to the 2017 game Hollow Knight and is aimed to be released before 12 June 2023.</p>
                             <p class="about__desc">In May 2022, Hollow Knight: Silksong won a "Most Anticipated Game" award from Unity. In response, Team Cherry thanked the community for their support and said "It can't be too much longer, surely!"</p>
                         </div>
                     </div>
                 </div>
                 <div class="about__video">
-                    <video src="/Hollow Knight_ Silksong - Xbox Game Pass Reveal Trailer - Xbox & Bethesda Games Showcase 2022.mp4" muted preload="metadata" playsinline controls autoplay></video>                                                    
+                    <video src="/Hollow Knight_ Silksong - Xbox Game Pass Reveal Trailer - Xbox & Bethesda Games Showcase 2022.mp4" muted preload="metadata" playsinline controls autoplay></video>
                 </div>
             </div>
         </section>
@@ -78,18 +93,22 @@
                 <h2 class="visually-hidden">Portfolio</h2>
                 <ul class="list-reset portfolio__list">
                     <li class="portfolio-item grid">
-                        <div class="portfolio-item__col">
+                        <div class="portfolio-item__col" data-aos="fade-right">
                             <h3 class="portolio-item__title">Team Cherry</h3>
                             <p class="portfolio-item__descr">Team Cherry is an indie games developer in Adelaide, South Australia.<br> Our mission is to build crazy, exciting worlds for you to explore and conquer. </p>
                         </div>
-                        <div class="portfolio-item__col">
+                        <div class="portfolio-item__col" data-aos="zoom-in">
                             <img src="img/logo2.png" alt="Portfolio photo" class="portfolio-item__image">
                         </div>
                     </li>
                     <li class="portfolio-item portfolio-item--reverse grid">
                         <div class="portfolio-item__col">
                             <h3 class="portolio-item__title">The Team</h3>
-                            <p class="portfolio-item__descr"><h4>Ari Gibson</h4> Ari is a Co-director of Team Cherry. He previously ran the animation studio Mechanical Apple and has worked on countless projects across film, games and music videos. <h4>William Pellen</h4> William is a Co-director of Team Cherry. He's been designing and building games for years, creating crazy worlds for people to poke around in and explore. <h4>Jack Vine</h4> Jack is Team Cherry’s supremely talented coder. Jack’s been building out the systems, tightening and optimising and adding a suite of all new exciting features.</p>
+                            <div class="portfolio-item__descr">
+                                <p><span><b>Ari Gibson</b><br></span> Ari is a Co-director of Team Cherry. He previously ran the animation studio Mechanical Apple and has worked on countless projects across film, games and music videos.</p>
+                                <p><span><b>William Pellen</b><br></span> William is a Co-director of Team Cherry. He's been designing and building games for years, creating crazy worlds for people to poke around in and explore.<br></p>
+                                <p><span><b>Jack Vine</b><br></span> Jack is Team Cherry’s supremely talented coder. Jack’s been building out the systems, tightening and optimising and adding a suite of all new exciting features.</p>
+                            </div>
                         </div>
                         <div class="portfolio-item__col">
                             <img src="img/team-cherry.jpg" alt="Portfolio photo" class="portfolio-item__image">
@@ -105,18 +124,33 @@
                 </h2>
                 <blockquote class="quote__content">
                     <p class="quote__text">
-                        We're honored that Hollow Knight: Silksong won the 2021 Unity Award for the most anticipated game, and hugely appreciatie all of the fans who support us as we work on the game. Thank you so much. We're looking forward to the day we can share the game with you all. It can't be too much longer, surely!
+                        We're honored that Hollow Knight: Silksong won the 2021 Unity Award for the most anticipated game, and hugely appreciatie all of the fans who support us as we work on the game. Thank you so much. We're looking forward to the day we can share the game
+                        with you all. It can't be too much longer, surely!
                     </p>
                 </blockquote>
                 <cite class="quote__author">Team Cherry </cite>
             </div>
         </section>
-        <section class="services">
+        <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/hkscrn1.jpg" alt="" class="services__image" aria-hidden="true"></div>
+                    <div class="swiper-slide"><img src="img/hkscrn2.jpg" alt="" class="services__image" aria-hidden="true"></div>
+                    <div class="swiper-slide"><img src="img/hkscrn3.jpg" alt="" class="services__image" aria-hidden="true"></div>
+                    <div class="swiper-slide"><img src="img/hkscrn4.jpg" alt="" class="services__image" aria-hidden="true"></div>
+                    <div class="swiper-slide"><img src="img/hkscrn5.jpg" alt="" class="services__image" aria-hidden="true"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+
+        <section class="about">
             <h2 class="visually-hidden">Features</h2>
-            <img src="img/hkscrn1.jpg" alt="" class="services__image" aria-hidden="true">
             <div class="container">
                 <ul class="list-reset services__list">
-                    <li class="services-item grid">
+                    <li class="services-item grid" data-aos="zoom-in-down" data-aos-offset="500" data-aos-easing="ease-in-sine">
                         <div class="services-item__col">
                             <h3 class="services-item__title">Entities</h3>
                         </div>
@@ -124,15 +158,16 @@
                             <p class="services-item__desc">The game is planned to feature over 165 different enemies.[3] Hornet will also encounter many friendly non-player characters.</p>
                         </div>
                     </li>
-                    <li class="services-item grid">
+                    <li class="services-item grid" data-aos="zoom-in-right">
                         <div class="services-item__col">
                             <h3 class="services-item__title">Additional Difficulty</h3>
                         </div>
                         <div class="services-item__col">
-                            <p class="services-item__desc">Silksong will have an additional difficulty mode with permanent death called "Silk Soul mode" like the "Steel Soul mode" found in Hollow Knight. It will feature more differences from the base game than "Steel Soul mode" made in Hollow Knight, though the extent of the changes is not currently known.</p>
+                            <p class="services-item__desc">Silksong will have an additional difficulty mode with permanent death called "Silk Soul mode" like the "Steel Soul mode" found in Hollow Knight. It will feature more differences from the base game than "Steel Soul mode" made
+                                in Hollow Knight, though the extent of the changes is not currently known.</p>
                         </div>
                     </li>
-                    <li class="services-item grid">
+                    <li class="services-item grid" data-aos="zoom-in-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
                         <div class="services-item__col">
                             <h3 class="services-item__title">Premise</h3>
                         </div>
@@ -140,12 +175,14 @@
                             <p class="services-item__desc">Hornet is captured and taken to the unknown kingdom of Pharloom, which is said to be "haunted by Silk and Song", and must climb to the top to reach a shining citadel.</p>
                         </div>
                     </li>
-                    <li class="services-item grid">
+                    <li class="services-item grid" data-aos="zoom-in-up">
                         <div class="services-item__col">
                             <h3 class="services-item__title">Development</h3>
                         </div>
                         <div class="services-item__col">
-                            <p class="services-item__desc">In June 2022, a new trailer for the game was revealed at the Xbox & Bethesda Games Showcase 2022, revealing that the game would be released on Xbox Game Pass at launch, with the game being available through the service for PC and Xbox Series X/S. While no release date was announced, Xbox stated in a tweet that the game would be available within the next twelve months, before 12 June 2023. In September 2022, Sony confirmed in a tweet that the game would also come to PlayStation 4 and PlayStation 5.</p>
+                            <p class="services-item__desc">In June 2022, a new trailer for the game was revealed at the Xbox & Bethesda Games Showcase 2022, revealing that the game would be released on Xbox Game Pass at launch, with the game being available through the service for
+                                PC and Xbox Series X/S. While no release date was announced, Xbox stated in a tweet that the game would be available within the next twelve months, before 12 June 2023. In September 2022, Sony confirmed in a tweet that
+                                the game would also come to PlayStation 4 and PlayStation 5.</p>
                         </div>
                     </li>
                 </ul>
@@ -182,16 +219,30 @@
             </div>
             <div class="footer_col">
                 <h2 class="footer__title">E-mail</h2>
-                <form action="#" class="footer__form">
-                    <input type="email" name="email" class="footer__input" placeholder="E-mail">
-                    <button class="btn-reset footer_btn" aria-label="Send Email"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5L15 12L8 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        </button>
+                <form action="#" class="know-form">
+                    <h2 class="know-form__title">Want to know more? Ask us a question:</h2>
+                    <div class="know-form__content">
+                        <label class="know-form__field">
+                            <span class="form-field__caption">Name</span>
+                            <input class="form-field__input" type="text" placeholder="Your name">
+                        </label>
+                        <label class="know-form__field">
+                            <span class="form-field__caption">Phone</span>
+                            <input class="form-field__input" type="tel" placeholder="Your phone">
+                        </label>
+                        <label class="know-form__field form-field--big">
+                            <span class="form-field__caption">Message</span>
+                            <input class="form-field__input" type="text" placeholder="Your message">
+                        </label>
+                        <button class="btn-reset know-form__btn btn btn--fill" type="submit">Send</button>
+                    </div>
                 </form>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,23 @@
 @media (max-width: 767px) {
+    .hero {
+        height: 100%;
+    }
     .header__container {
         flex-direction: column;
     }
     .logo {
         margin-bottom: 30px;
     }
+    .completed__value {
+        font-size: 40px;
+    }
     .hero__title {
-        font-size: 70px;
+        font-size: 45px;
         line-height: 84px;
     }
     .quote__text {
         text-align: center;
+        font-size: 22px;
     }
     .grid {
         grid-template-columns: auto;
@@ -43,6 +50,7 @@
     }
     .services__image {
         height: 300px;
+        width: 100%;
     }
     .about__video video {
         height: 400px;
@@ -52,5 +60,11 @@
     }
     .about__play {
         top: 35%;
+    }
+}
+
+@media (max-width: 468px) {
+    .hero__title {
+        font-size: 25px;
     }
 }
